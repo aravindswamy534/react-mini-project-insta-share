@@ -1,0 +1,80 @@
+.login-image {
+  position: absolute;
+  left: 11.11%;
+  right: 48.47%;
+  top: 31.84%;
+  bottom: 31.74%;
+}
+.form-login {
+  position: absolute;
+  left: 57.22%;
+  right: 11.11%;
+  top: 27.64%;
+  bottom: 27.64%;
+
+  background: #fefeff;
+  box-shadow: 0px 8px 40px rgba(7, 7, 7, 0.08);
+  border-radius: 8px;
+}
+
+.insta-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  padding-left: 150px;
+  padding-top: 20px;
+}
+
+.insta-share-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.insta-share-username {
+  padding-left: 30px;
+}
+.insta-share-input-username {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  width: 200px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.insta-share-password {
+  padding-left: 30px;
+}
+
+.insta-share-input-password {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  width: 200px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+.login-button {
+  background-color: blue;
+  width: 200px;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+.user-filed-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+.error-message {
+  color: #ff0b37;
+  font-family: 'Roboto';
+}

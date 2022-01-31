@@ -1,0 +1,43 @@
+.profile-pic-icon {
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+  border: 1px solid red;
+  padding: 2px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.profile-name-container {
+  display: flex;
+  border: 2px solid #8c788c;
+}
+.profile-name {
+  padding-left: 10px;
+  margin-bottom: 30px;
+}
+.post-container {
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 30px;
+}
+.posted-image {
+  width: 960px;
+}
+.like-button {
+  border: 0px solid red;
+}
+
+.icon-container {
+  padding-top: 10px;
+}
+.like-button {
+  margin-left: 10px;
+}
+.message-icon {
+  margin-left: 10px;
+}
+
+.share-icon {
+  margin-left: 10px;
+}
