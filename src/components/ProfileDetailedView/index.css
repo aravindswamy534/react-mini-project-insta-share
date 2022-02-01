@@ -1,0 +1,19 @@
+.stories-icon-profile {
+  height: 60px;
+  width: 60px;
+  margin-left: 20px;
+  border-radius: 60px;
+}
+.profile-stories-icon-container {
+  display: flex;
+  list-style-type: none;
+}
+.profile-posts-icon-container {
+  display: flex;
+  list-style-type: none;
+}
+.post-icon-profile {
+  margin: 20px;
+  flex-wrap: wrap;
+  display: flex;
+}

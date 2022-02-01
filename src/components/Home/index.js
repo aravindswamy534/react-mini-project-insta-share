@@ -30,6 +30,7 @@ class Home extends Component {
     instaStories: [],
     apiStatusStories: apiStatusConstantsStories.initial,
     searchInput: '',
+    userLikedStatus: '',
   }
 
   componentDidMount() {
@@ -82,7 +83,7 @@ class Home extends Component {
     const response = await fetch(apiUrl, options)
     if (response.ok === true) {
       const data = await response.json()
-      const updatedata = data.posts.map(each => ({
+      const updateData = data.posts.map(each => ({
         comments: each.comments.map(each2 => ({
           userName: each2.user_name,
           userId: each2.user_id,
@@ -97,10 +98,16 @@ class Home extends Component {
         userId: each.user_id,
         userName: each.user_name,
       }))
-      this.setState({data: updatedata, apiStatus: apiStatusConstants.success})
+      this.setState({data: updateData, apiStatus: apiStatusConstants.success})
     } else {
       this.setState({apiStatus: apiStatusConstants.failure})
     }
+  }
+
+  userLikedDetails = (status, postId) => {
+    this.setState({userLikedStatus: status})
+    console.log(status)
+    console.log(postId)
   }
 
   onRenderPostView = () => {
@@ -110,7 +117,11 @@ class Home extends Component {
       <div>
         <div className="post-container">
           {data.map(each => (
-            <PostItem each={each} key={v4()} />
+            <PostItem
+              userLikedDetails={this.userLikedDetails}
+              each={each}
+              key={v4()}
+            />
           ))}
         </div>
       </div>

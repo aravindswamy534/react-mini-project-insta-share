@@ -60,7 +60,7 @@ class Header extends Component {
               <ImHome className="home-icon" />
               <h1 className="nav-text">Home</h1>
             </Link>
-            <Link className="link" to="/profile">
+            <Link className="link" to="/my-profile">
               <h1 className="nav-text">Profile</h1>
             </Link>
           </li>

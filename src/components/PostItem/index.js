@@ -3,7 +3,7 @@ import {BsHeart} from 'react-icons/bs'
 import {FaRegComment} from 'react-icons/fa'
 import {BiShareAlt} from 'react-icons/bi'
 import Cookies from 'js-cookie'
-
+import {Link} from 'react-router-dom'
 import {Component} from 'react'
 import Comment from '../Comment'
 import './index.css'
@@ -12,9 +12,14 @@ class PostItem extends Component {
   state = {isClicked: true}
 
   toggleLikeFont = async () => {
-    const {each} = this.props
+    const {each, userLikedDetails} = this.props
     const {postId} = each
-    this.setState(prevState => ({isClicked: !prevState.isClicked}))
+    await this.setState(prevState => ({isClicked: !prevState.isClicked}))
+    // const {isClicked} = this.state
+    // console.log(isClicked)
+
+    // const toggledAns = isClicked ? 'un_like' : 'like'
+    // userLikedDetails(toggledAns, postId)
     // const {isClicked} = this.state
     // const toggledAns = isClicked ? 'un_like' : 'like'
     // const jwtToken = Cookies.get('jwt_token')
@@ -47,14 +52,14 @@ class PostItem extends Component {
 
     return (
       <li className="post-container">
-        <div className="profile-name-container">
+        <Link to={`/users/${userId}`} className="profile-name-container">
           <img
             className="profile-pic-icon"
             src={profilePic}
             alt="post author profile"
           />
           <p className="profile-name">{userName}</p>
-        </div>
+        </Link>
         <img className="posted-image" src={postDetailsImageUrl} alt="post" />
         <div className="icon-container">
           <button
