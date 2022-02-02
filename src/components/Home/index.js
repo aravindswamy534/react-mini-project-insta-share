@@ -200,8 +200,8 @@ class Home extends Component {
   }
 
   renderEmptyView = () => {
-    const {data} = this.state
-    if (data.length === 0) {
+    const {data, search} = this.state
+    if (data.length === 0 && search !== '') {
       return (
         <div className="zero-search-result">
           <img
@@ -221,14 +221,14 @@ class Home extends Component {
     if (jwtToken === undefined) {
       return <Redirect to="/login" />
     }
-    const {data} = this.state
+    const {data, search} = this.state
 
     return (
       <div>
         <Header userEnteredSearchedValue={this.userEnteredSearchedValue} />
         {this.renderDisplayedStories()}
         {this.renderDisplayedPost()}
-        <div>{data.length === 0 && this.renderEmptyView()}</div>
+        <div>{this.renderEmptyView()}</div>
       </div>
     )
   }
